@@ -26,11 +26,11 @@
                 <div id="modal-{{ category.id }}" class="modal">
                     <div class="modal-content">
                         <h4>Are you sure you want to delete {{ category.category_name }}?</h4>
-                        <p>This cannot be undone!</p>
+                        <p>This will delete all tasks associated with {{ category.category.name }}. This cannot be undone!</p>
                     </div>
                     <div class="modal-footer">
                         <a href="{{ url_for('delete_category', category_id=category.id) }}" class="btn red">Delete</a>
-                        <a href="modal-close" class="btn green accent-4">Cancel</a>
+                        <a href="{{ url_for('categories') }}" class="btn green accent-4">Cancel</a>
                     </div>
                 </div>
             </div>
